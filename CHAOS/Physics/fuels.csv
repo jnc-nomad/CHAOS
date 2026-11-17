@@ -1,0 +1,6 @@
+fuel_name,formula,hf_value,hf_units,T_ref_K,a_metric,n,density_kg_m3,g_ox_max_kg_m2s
+htpb,H 103 C 73 O 1,12954.799,cal/mol,298.15,0.0001,0.5,930,500
+paraffin,C 75 H 128,-444694.073,cal/mol,298.15,0.000144,0.5,900,350
+pla,C 3 H 4 O 2,-389000,J/mol,298.15,0.0000234,0.5,1240,350
+abs,C 3.85 H 4.85 N 0.43,62630,J/mol,298.15,0.0000487,0.5,1050,400
+al,AL 1,0,J/mol,298.15,,,2700,

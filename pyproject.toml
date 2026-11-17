@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chaos-hybrid"
+dynamic = ["version"]
+description = "CHAOS: hybrid rocket engine design and transient blowdown simulation."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "BYU Propulsion" }]
+keywords = ["rocketry", "hybrid rocket", "propulsion", "nitrous oxide", "CEA"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "CoolProp",
+    "cea",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib"]
+dev = ["matplotlib", "pytest", "build", "twine"]
+
+[tool.setuptools.dynamic]
+version = { attr = "CHAOS.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["CHAOS", "CHAOS.*"]
+
+[tool.setuptools.package-data]
+"CHAOS.Physics" = ["*.csv"]
